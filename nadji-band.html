@@ -44,14 +44,16 @@
 									<h1>Website find band</h1>
 									<p>Web application used for connecting musicians, bands and taverns
 										with shared interests. Technologies and frameworks used: React, Node.js, Mongoose,
-										Express, MongoDB. It can be found: <a href="https://github.com/igorMatf/nadji-band" class="icon brands fa-github"><span class="label">GitHub</span></a>
+										Express, MongoDB. Source code can be found: <a href="https://github.com/igorMatf/nadji-band" class="icon brands fa-github"></a>
+										<br>
+										I have published it using heroku, and can be previewed on: <a href="https://find-band.herokuapp.com/" class="fas fa-external-link-alt"> </a>
 									</p>
 								</header>
 								<div class="image main"><img src="images/nadji-band.png" alt="" /></div>
 								<p>Home page with a Navbar on top, slider with buttons in body and Footer on bottom of the page. When user clicks Register button, it shows up registration form.</p>
 								<div class="image main"><img src="images/register-form.png" alt="" /></div>
 								<p>On this form, user must choose account type ( musician, band or tavern), enter his/her email adress, and password two times.
-									On front end side, there are checks did user choosed account type, did user entered a valid email adress and checks for password equality.
+									On front end side, there are checks did user choose account type, did user enter a valid email adress and checks for password equality.
 									If everything is correct, then that information is passed to the server. On server side, first, it checks is that email already taken, and if it is, server response with a message "Email already exists" 
 									If it is not taken, on server side is made the secret token, which is sent on provided email and as response server redirects user to a page with a form where user should enter a secret token which he/she recieved on email.
 									Server side also save that user in database, with extra field active, which is setted on false by default. Password is crypted with bcrypt library.
@@ -82,7 +84,7 @@
 								</p>
 								<div class="image main"><img src="images/createAd.png" alt="" /></div>
 								<p>
-									At the end, I would like to say something about implementation of server side. All data were saved on MongoDB.  There are 3 collections in our database:
+									At the end, I would like to say something about implementation of server side. All data were saved on MongoDB.  There are 3 collections in database:
 									<ol>
 										<li>Users</li>
 										<li>Forums</li>
@@ -96,7 +98,6 @@
 									
 								</p>
 							</section>
-
 					</div>
 
 				<!-- Footer -->
