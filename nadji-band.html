@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic Page - Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Find a band</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Other projects</a></li>
+							
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.facebook.com/igormilosevic96" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="https://www.linkedin.com/in/igor-milosevic-39120b122/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+							<li><a href="https://github.com/igorMatf" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Website find band</h1>
+									<p>Web application used for connecting musicians, bands and taverns
+										with shared interests. Technologies and frameworks used: React, Node.js, Mongoose,
+										Express, MongoDB. It can be found: <a href="https://github.com/igorMatf/nadji-band" class="icon brands fa-github"><span class="label">GitHub</span></a>
+									</p>
+								</header>
+								<div class="image main"><img src="images/nadji-band.png" alt="" /></div>
+								<p>Home page with a Navbar on top, slider with buttons in body and Footer on bottom of the page. When user clicks Register button, it shows up registration form.</p>
+								<div class="image main"><img src="images/register-form.png" alt="" /></div>
+								<p>On this form, user must choose account type ( musician, band or tavern), enter his/her email adress, and password two times.
+									On front end side, there are checks did user choosed account type, did user entered a valid email adress and checks for password equality.
+									If everything is correct, then that information is passed to the server. On server side, first, it checks is that email already taken, and if it is, server response with a message "Email already exists" 
+									If it is not taken, on server side is made the secret token, which is sent on provided email and as response server redirects user to a page with a form where user should enter a secret token which he/she recieved on email.
+									Server side also save that user in database, with extra field active, which is setted on false by default. Password is crypted with bcrypt library.
+									If user enters a valid secret token, on server side active field in databse of that account is changed from false to true and as response redirects user to configure your profile page.
+								</p>
+								<div class="image main"><img src="images/configure-profile.png" alt="" /></div>
+								<p>Configure your profile page is represented as form, where user can add some more information which depends on account type. 
+									For example, musician can add information about genre, instrument, location, description and purpose of making account. 
+									At the end of form, there are two buttons, save changes and delete account. Save changes button saves everything in database and redirects user to view profile page. 
+									Delete button deletes that user, and everything what did that user made (all ads) and redirects user to home page.
+								</p>
+								<div class="image main"><img src="images/view-profile.png" alt="" /></div>
+								<p>
+									On this page, user can see how does it look his/her profile page. A new things are profile image, and stars. Stars represents a ratings from other users.
+									Now, when user configure profile, from navbar he/she can list all Musicians, Bands, or Taverns. Separately for each page for listing ads, there are some filters for easier search on left side, and list of ads on right side.
+									Every ad has title, description, location, email adress and some other fields which depends who made ad (Musician, Band or Tavern).
+									Also, there are two buttons: 
+									<ol>
+										<li>Contact</li>
+										<li>View profile</li>
+									</ol>
+								</p>
+								<div class="image main"><img src="images/show-ads.png" alt="" /></div>
+								<p>
+									If user clicks button View profile, he/she is redirected to profile of user who posted that ad. User can see profile, and also rate that profile.
+									If user clicks Contact button, he/she is redirected to page with contact form. User should enter a title of message, and message which will be sent to the user who posted ad.
+									At navbar, user can choose CreateAd, which redirects to the form from where user can make her/his own ad.
+								</p>
+								<div class="image main"><img src="images/createAd.png" alt="" /></div>
+								<p>
+									At the end, I would like to say something about implementation of server side. All data were saved on MongoDB.  There are 3 collections in our database:
+									<ol>
+										<li>Users</li>
+										<li>Forums</li>
+										<li>Ratings</li>
+									</ol>
+									Each of them has their own controller for GET and POST methods (saving, updating, getting and removing data from database), which works with the help of frameworks:
+									<ol>
+										<li>Mongoose</li>
+										<li>Express</li>
+									</ol>
+									
+								</p>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>Belgrade, Serbia</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">+381 60 357 46 88</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">igormilosevic96@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://www.facebook.com/igormilosevic96" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.linkedin.com/in/igor-milosevic-39120b122/" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+									<li><a href="https://github.com/igorMatf" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
