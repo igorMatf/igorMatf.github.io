@@ -432,7 +432,7 @@ print 'It took ' + i + ' iterations to sort the deck.';
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-							<form method="post" action="#">
+							<form  action="POST" data-netlify="true">
 								<div class="fields">
 									<div class="field">
 										<label for="name">Name</label>
@@ -445,6 +445,14 @@ print 'It took ' + i + ' iterations to sort the deck.';
 									<div class="field">
 										<label for="message">Message</label>
 										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+									<div class="field">
+										<input type="file" name="myfile" id="myfile" placeholder="Upload file" rows="3"></input>
+									</div>
+									<div class="field">
+										<div data-netlify-recaptcha="true">
+
+										</div>
 									</div>
 								</div>
 								<ul class="actions">
